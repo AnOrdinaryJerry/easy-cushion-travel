@@ -1,9 +1,13 @@
 # Easy Cushion Travel
+This mod lets you quickly travel using cushions, without the need to rebind your keys.
 
-## Setup
+I originally made this mod for a bedrock player on my server that was struggling to use the cushion highways due to being on a controller, but realized it could also be used by java players to prevent the need of rebinding your "Use Item/Place Block" to a keyboard key every time you wanted to travel.
+I hope this mod helps some people out :)
 
-For setup instructions, please see the [Fabric Documentation page](https://docs.fabricmc.net/develop/getting-started/creating-a-project#setting-up) related to the IDE that you are using.
+/ct or /cushiontravel while looking at a cushion to activate.
+It automatically stops when you look away for more than 1 second, but the number is customizable.
+It also stops when the command is run while already active, the player sneaks, or the player leaves and rejoins the world.
 
-## License
+Contact me on discord, my username is 0as1ss.
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+(c) 2026 Jerdigo (MIT)
