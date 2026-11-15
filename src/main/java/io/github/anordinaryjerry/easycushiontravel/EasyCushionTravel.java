@@ -32,12 +32,14 @@ public class EasyCushionTravel implements ModInitializer {
 
 		LOGGER.info("Hello Fabric world!");
 		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
-			dispatcher.register(Commands.literal("ct").executes(EasyCushionTravel::toggleTravel));
+			dispatcher.register(Commands.literal("ct")
+					.requires(CommandSourceStack::isPlayer).executes(EasyCushionTravel::toggleTravel));
+			dispatcher.register(Commands.literal("cushiontravel")
+					.requires(CommandSourceStack::isPlayer).executes(EasyCushionTravel::toggleTravel));
 		});
 	}
 
 	private static int toggleTravel(CommandContext<CommandSourceStack> context) {
-		// Steps to fill in, one at a time:
 		// 1. get the source from the context
 		CommandSourceStack source = context.getSource();
 		// 2. get the server from the source
