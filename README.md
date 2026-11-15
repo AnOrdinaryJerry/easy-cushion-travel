@@ -8,9 +8,10 @@ I hope this mod helps some people out :)
 It automatically stops when you look away for more than 1 second, but the number is customizable.
 It also stops when the command is run while already active, the player sneaks, or the player leaves and rejoins the world.
 
-![ECT Showcase GIF; a player using /ct to travel a cushionm highway](https://raw.githubusercontent.com/AnOrdinaryJerry/easycushiontravel/refs/heads/master/assets/easy_cushion_travel_showcase.gif)
+![ECT Showcase GIF; a player using /ct to travel a cushion highway](https://raw.githubusercontent.com/AnOrdinaryJerry/easycushiontravel/refs/heads/master/assets/easy_cushion_travel_showcase.gif)
 
-The amount of time that a player looks away from cushions for travel to automatically stop can be edited using 
+The amount of time that a player looks away from cushions for travel to automatically stop can be edited using
+
 `/scoreboard players set #delay ect_config [number of seconds]`
 
 By default, the number is set to 1.
