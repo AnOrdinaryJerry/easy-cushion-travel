@@ -4,7 +4,7 @@ This mod lets you quickly travel using cushions, without the need to rebind your
 I originally made this mod for a bedrock player on my server that was struggling to use the cushion highways due to being on a controller. One of my friends pointed out that it could also be used by java players to prevent the need of rebinding your "Use Item/Place Block" to a keyboard key every time you wanted to travel.
 I hope this mod helps some people out :)
 
-/ct or /cushiontravel while looking at a cushion to activate.
+`/ct` or `/cushiontravel` while looking at a cushion to activate, or if using the datapack, `/trigger ect`.
 It automatically stops when you look away for more than 1 second, but the number is customizable.
 It also stops when the command is run while already active, the player sneaks, or the player leaves and rejoins the world.
 
