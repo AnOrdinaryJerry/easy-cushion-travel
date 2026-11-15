@@ -3,9 +3,9 @@
 	"id": "easycushiontravel",
 	"version": "${version}",
 	"name": "Easy Cushion Travel",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "An easier way to travel with cushions!",
 	"authors": [
-		"Me!"
+		"Jerdigo (Jerry)"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
