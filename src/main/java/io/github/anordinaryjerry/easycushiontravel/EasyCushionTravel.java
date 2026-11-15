@@ -53,9 +53,14 @@ public class EasyCushionTravel implements ModInitializer {
 			source.sendFailure(Component.literal("Failed to initiate Easy Cushion Travel."));
 			return 0;
 		}
-		// 6. run the function with the source (output suppressed)
-		functionManager.execute(toggleFunction.get(), source.withSuppressedOutput());
-		// 7. return success
+		// 6. This line was added to prevent the /ct and /cushiontravel commands from failing to work on a server with cheats disabled.
+		// 		It gives the function the permission level it needs because non-op players cannot use selectors.
+		// 		Used withPermission instead of withMaximumPermission because withMaximumPermission always prefers the lower level of permissions,
+		//		which is the reason the commands didn't work without cheats enabled anyway.
+		CommandSourceStack functionSource = source.withSuppressedOutput().withPermission(server.getFunctionCompilationPermissions());
+		// 7. run the function with the source (output suppressed)
+		functionManager.execute(toggleFunction.get(), functionSource);
+		// 8. return success
 		return Command.SINGLE_SUCCESS;
 	}
 
