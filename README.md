@@ -8,6 +8,8 @@ I hope this mod helps some people out :)
 It automatically stops when you look away for more than 1 second, but the number is customizable.
 It also stops when the command is run while already active, the player sneaks, or the player leaves and rejoins the world.
 
+![](assets/easy_cushion_travel_showcase.gif)
+
 Contact me on discord, my username is 0as1ss.
 
 (c) 2026 Jerdigo (MIT)
