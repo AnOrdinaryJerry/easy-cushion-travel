@@ -3,10 +3,10 @@
 # Datapack: this also turns the pack off at the end, so nothing else is needed.
 # Mod: this only clears the data. The mod keeps running tick and load until the jar is gone,
 # so the admin has to stop the server and remove the jar right after.
-# This file is the same in the datapack and the mod. Keep both copies identical.
+# The datapack and the mod share this file, Gradle copies datapack/ into the jar when it bundles.
 #
 # Stop everyone who is traveling. This removes ect_traveling and sends the stop message.
-# It has to run before the objectives are removed, because stop sets ect_idle.
+# It has to run before the objectives are removed, because stop sets ect_idle and ect_sneak.
 # The temporary tags (ect_rider, ect_cushion, ect_occupied) never outlive the run that adds
 # them, so there's nothing else to clean up.
 # A player who is offline right now keeps ect_traveling, because commands can't reach offline
@@ -16,6 +16,7 @@ execute as @a[tag=ect_traveling] run function easycushiontravel:stop
 # including the fake players #delay, #delay_ticks, and #20 on ect_config.
 scoreboard objectives remove ect
 scoreboard objectives remove ect_idle
+scoreboard objectives remove ect_sneak
 scoreboard objectives remove ect_left
 scoreboard objectives remove ect_config
 # Tell whoever ran this what happened. The first line is true for everyone.

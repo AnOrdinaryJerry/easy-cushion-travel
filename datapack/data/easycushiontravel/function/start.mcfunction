@@ -8,7 +8,9 @@ function easycushiontravel:find
 execute unless entity @e[type=cushion,tag=ect_cushion,sort=nearest,limit=1] run return run tellraw @s {"text":"Look at a cushion first!","color":"red"}
 tag @s add ect_traveling
 tellraw @s {"text":"Cushion Travel Started.","color":"green"}
+tellraw @s {"text":"Press jump to stop","color":"green"}
 # Remove find's temporary tag. A leftover could make forward pick the wrong cushion next tick.
 tag @e[type=cushion,tag=ect_cushion] remove ect_cushion
-# Start the idle counter fresh in case an old value was left over.
+# Start both the idle and sneak counters fresh in case an old value was left over.
 scoreboard players set @s ect_idle 0
+scoreboard players set @s ect_sneak 0

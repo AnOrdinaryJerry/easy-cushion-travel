@@ -3,6 +3,7 @@
 #
 # Everything this pack uses:
 #   Objectives: ect (the trigger players run), ect_idle (ticks since last hop),
+#               ect_sneak (number of ticks that the sneak key has been held),
 #               ect_config (settings and constants), ect_left (counts how often a player left)
 #   Tags: ect_traveling (player is traveling)
 #         ect_rider (temporary: the current player inside find)
@@ -14,6 +15,7 @@
 # Adding an objective that already exists just fails harmlessly, so this is safe to rerun.
 scoreboard objectives add ect trigger
 scoreboard objectives add ect_idle dummy
+scoreboard objectives add ect_sneak dummy
 scoreboard objectives add ect_config dummy
 # Scoreboard math can only multiply by another score, so 20 needs a score of its own.
 scoreboard players set #20 ect_config 20
