@@ -9,10 +9,13 @@ I hope this mod helps some people out :)
 Travel stops when:
  - The player looks away for more than one second (customizable)
  - The command is run while already active
- - The player sneaks for a moment (Java only)
+ - The player sneaks (Java only)
  - The player jumps
  - The player leaves and rejoins the world
 
+*Bedrock players who are linked to a Java account through Floodgate cannot be told apart from Java players, and travel will likely stop on its own after a  few hops.*
+
+*This won't affect most Bedrock players, and can be fixed in a later version. If you need me to update the mod so that it does work for Java-linked Bedrock players, contact me on Discord (below).*
 
 ![ECT Showcase GIF; a player using /ct to travel a cushion highway](https://raw.githubusercontent.com/AnOrdinaryJerry/easycushiontravel/refs/heads/master/assets/easy_cushion_travel_showcase.gif)
 

@@ -5,6 +5,5 @@
 # Whether a player is traveling is decided by this tag alone.
 tag @s remove ect_traveling
 tellraw @s {"text":"Cushion Travel Stopped.","color":"aqua"}
-# Reset the idle and sneak counters so the next trip starts fresh.
+# Reset the idle counter so the next trip starts fresh.
 scoreboard players set @s ect_idle 0
-scoreboard players set @s ect_sneak 0

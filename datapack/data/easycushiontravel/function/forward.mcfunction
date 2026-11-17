@@ -3,24 +3,14 @@
 #
 # Sneaking stops travel. This has to be the first test, so the player is stopped
 # before find and the mount below can put them back on a cushion.
-#   Why there's a counter:
-#       When bedrock players switch cushions, geyser SOMETIMES sends a fake sneak that lasts one tick, and
-#       the pack is unable to tell it apart from a real sneak. This counter makes it so only a sneak held for
-#       3 ticks in a row counts.
 #
-# Holding sneak adds 1 to the counter, letting go resets to zero.
-execute if predicate easycushiontravel:sneaking run scoreboard players add @s ect_sneak 1
-execute unless predicate easycushiontravel:sneaking run scoreboard players set @s ect_sneak 0
-# On Bedrock Edition, Sneak cannot stop travel because real sneaking looks exactly the same as geyser's fake one.
+# If a player is on Java Edition (Determined with the UUID test in start.mcfunction), then it will detect if the player is sneaking.
+execute unless score @s ect_uuid matches 0 if predicate easycushiontravel:sneaking run return run function easycushiontravel:stop
+#
+# On Bedrock Edition, sneak cannot stop travel because real sneaking looks exactly the same as geyser's fake one.
 # So there is a jump detector here:
 execute if predicate easycushiontravel:jumping run return run function easycushiontravel:stop
-# Stops after three ticks held (~0.15 seconds)
-execute if score @s ect_sneak matches 3.. run return run function easycushiontravel:stop
-# While the key is held, but hasn't reached three ticks, it skips the hop.
-# This is important because if it wasn't here, the players would go forward two ticks worth of cushion travel after
-# holding sneak. This makes it so the players that are sneaking don't move at all,
-# which I personally think is the better of the two.
-execute if score @s ect_sneak matches 1.. run return 0
+#
 # Tags the cushion the player is looking at with ect_cushion (or nothing).
 function easycushiontravel:find
 # Found a cushion: reset the idle counter. No cushion: count one more idle tick.
